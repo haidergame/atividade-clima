@@ -1,14 +1,13 @@
 import { useState } from 'react';
 import './WeatherApp.css'; 
 
-// Componente WeatherApp
 const WeatherApp = () => {
     const [city, setCity] = useState('');
     const [weather, setWeather] = useState(null);
     const [error, setError] = useState(null);
     
     const getWeather = async (city) => {
-        const apiKey = '33ef1e73908c951742f2b03bcd8dba9a'; // Substitua com a sua chave de API da OpenWeatherMap
+        const apiKey = '33ef1e73908c951742f2b03bcd8dba9a';
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=pt_br`;
         
         try {
